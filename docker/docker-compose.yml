@@ -1,0 +1,11 @@
+version: '2'
+services:
+  node:
+    build: ./docker/node
+    container_name: ts-sample
+    ports:
+    - 3000:3000
+    volumes:
+    - ./frontend:/frontend
+    tty: true
+    working_dir: /frontend
